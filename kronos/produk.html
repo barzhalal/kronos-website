@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Produk — Kronos</title>
+<meta name="description" content="Lihat spesifikasi lengkap, material, dan movement jam tangan pilihan Anda.">
+<meta name="theme-color" content="#14161A">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Kronos">
+<meta property="og:title" content="Detail Produk — Kronos">
+<meta property="og:description" content="Spesifikasi lengkap jam tangan Kronos: diameter, material, movement, dan ketahanan air.">
+<meta property="og:image" content="assets/img/hero-kronos.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lewati" href="#konten">Lompat ke konten utama</a>
+
+<header class="situs-header">
+  <div class="pembungkus situs-header__isi">
+    <a class="logo" href="index.html">Kronos<span class="logo__titik" aria-hidden="true"></span></a>
+    <button class="hamburger" type="button" aria-expanded="false" aria-controls="menu-utama" aria-label="Buka menu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="menu-utama" aria-label="Navigasi utama">
+      <a class="nav__tautan" href="index.html">Beranda</a>
+      <a class="nav__tautan" href="koleksi.html">Koleksi</a>
+      <a class="nav__tautan" href="tentang.html">Tentang</a>
+      <a class="nav__tautan" href="kontak.html">Kontak</a>
+      <a class="tombol tombol--utama nav__cta" href="kontak.html">Hubungi kami</a>
+    </nav>
+  </div>
+</header>
+<button class="tirai" type="button" hidden aria-label="Tutup menu"></button>
+
+<main id="konten">
+
+  <section class="halaman-kepala">
+    <div class="pembungkus">
+      <nav class="remah" aria-label="Remah roti">
+        <a href="index.html">Beranda</a><span aria-hidden="true">/</span><a href="koleksi.html">Koleksi</a><span aria-hidden="true">/</span><span id="remah-produk">Produk</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Bila ?id= tidak cocok dengan data produk -->
+  <section class="pesan-kosong" id="produk-kosong" hidden>
+    <div class="pembungkus">
+      <p class="judul-besar" role="heading" aria-level="1">Produk tidak ditemukan</p>
+      <p class="lede">Tautan yang Anda buka tidak cocok dengan model mana pun di katalog kami. Model mungkin sudah diganti namanya atau tautannya terpotong.</p>
+      <p><a class="tombol tombol--gelap" href="koleksi.html">Kembali ke koleksi</a></p>
+    </div>
+  </section>
+
+  <div class="pembungkus">
+    <article class="produk" id="detail-produk">
+
+      <div class="galeri">
+        <div class="galeri__utama">
+          <div id="galeri-utama" class="galeri__media" role="img" aria-label=""></div>
+        </div>
+        <ul class="galeri__thumb" id="galeri-thumb"></ul>
+      </div>
+
+      <div class="produk__info">
+        <p class="produk__meta"><span id="produk-kategori">Kategori</span><span id="produk-kode">KR-000</span></p>
+        <h1 id="produk-nama">Nama produk</h1>
+        <p class="produk__harga" id="produk-harga">Rp 0</p>
+        <p class="stok stok--ada" id="produk-stok">Siap kirim hari ini</p>
+        <p id="produk-deskripsi"></p>
+
+        <div class="blok">
+          <h2 class="blok__judul">Pilihan strap</h2>
+          <div class="varian-daftar" id="produk-varian" role="group" aria-label="Pilihan strap"></div>
+        </div>
+
+        <div class="aksi-produk">
+          <a class="tombol tombol--utama" id="produk-beli" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Beli via WhatsApp</a>
+          <a class="tombol tombol--garis" id="produk-tanya" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Tanya produk</a>
+        </div>
+
+        <div class="blok">
+          <h2 class="blok__judul">Spesifikasi</h2>
+          <div class="tabel-bungkus">
+            <table class="tabel-spek" id="tabel-spesifikasi">
+              <caption class="sr-only">Spesifikasi teknis produk</caption>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="akordeon">
+          <div class="akordeon__item">
+            <h2>
+              <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="panel-kirim" id="tombol-kirim">Pengiriman</button>
+            </h2>
+            <div class="akordeon__panel" id="panel-kirim" role="region" aria-labelledby="tombol-kirim" hidden>
+              <p>Pesanan yang masuk sebelum pukul 15.00 WIB dikirim di hari yang sama. Estimasi tiba 1–2 hari untuk Jawa dan 3–5 hari untuk luar Jawa.</p>
+              <p>Ongkos kirim gratis ke seluruh Indonesia, termasuk asuransi paket. Nomor resi dikirim lewat WhatsApp begitu paket diserahkan ke kurir.</p>
+            </div>
+          </div>
+          <div class="akordeon__item">
+            <h2>
+              <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="panel-ukuran" id="tombol-ukuran">Panduan ukuran</button>
+            </h2>
+            <div class="akordeon__panel" id="panel-ukuran" role="region" aria-labelledby="tombol-ukuran" hidden>
+              <p>Kronos memakai empat diameter case. Bandingkan dengan jam yang biasa Anda pakai sekarang untuk memperkirakan kecocokan di pergelangan tangan.</p>
+              <div class="panduan-ukuran">
+                <svg viewBox="0 0 360 140" role="img" aria-label="Perbandingan empat diameter case Kronos: 36, 39, 41, dan 42 milimeter">
+                  <line x1="10" y1="120" x2="350" y2="120" stroke="#c9c5bc" stroke-width="1"/>
+                  <circle cx="55" cy="90" r="18" fill="none" stroke="#c9a227" stroke-width="2"/>
+                  <text x="55" y="122" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#6b7280">36 mm</text>
+                  <circle cx="150" cy="85" r="22.5" fill="none" stroke="#c9a227" stroke-width="2"/>
+                  <text x="150" y="122" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#6b7280">39 mm</text>
+                  <circle cx="245" cy="82" r="24.5" fill="none" stroke="#c9a227" stroke-width="2"/>
+                  <text x="245" y="122" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#6b7280">41 mm</text>
+                  <circle cx="330" cy="80" r="26" fill="none" stroke="#c9a227" stroke-width="2.4"/>
+                  <text x="330" y="122" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#1a1a1a" font-weight="600">42 mm</text>
+                </svg>
+              </div>
+              <ul>
+                <li><strong>36 mm</strong> — pas untuk pergelangan ramping (± 14–16,5 cm keliling).</li>
+                <li><strong>39 mm</strong> — proporsi harian yang aman untuk hampir semua ukuran (± 15,5–18 cm).</li>
+                <li><strong>41–42 mm</strong> — tampil lebih tegas, cocok untuk pergelangan lebih besar (± 17–20 cm) atau yang suka model diver/chronograph.</li>
+              </ul>
+              <p>Masih ragu? Kirim keliling pergelangan tangan Anda (ukur pakai meteran kain atau tali lalu diukur dengan penggaris) lewat WhatsApp, tim kami bantu bandingkan.</p>
+            </div>
+          </div>
+          <div class="akordeon__item">
+            <h2>
+              <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="panel-garansi" id="tombol-garansi">Garansi &amp; servis</button>
+            </h2>
+            <div class="akordeon__panel" id="panel-garansi" role="region" aria-labelledby="tombol-garansi" hidden>
+              <p>Garansi 2 tahun mencakup movement dan hasil perakitan. Kerusakan akibat benturan, air yang masuk karena crown terbuka, dan goresan pemakaian tidak termasuk.</p>
+              <ul>
+                <li>Ganti baterai gratis selama masa garansi.</li>
+                <li>Penyetelan panjang strap dan bracelet tanpa biaya, seumur pemakaian.</li>
+                <li>Servis di luar garansi dikerjakan 5–10 hari kerja dengan estimasi biaya di awal.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="akordeon__item">
+            <h2>
+              <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="panel-rawat" id="tombol-rawat">Panduan perawatan</button>
+            </h2>
+            <div class="akordeon__panel" id="panel-rawat" role="region" aria-labelledby="tombol-rawat" hidden>
+              <p>Bilas case dan strap karet dengan air tawar setelah terkena air laut, lalu keringkan dengan kain lembut. Pastikan crown selalu tertekan rapat sebelum berenang.</p>
+              <p>Strap kulit sebaiknya dijauhkan dari air dan panas langsung. Lepaskan jam saat berolahraga berat agar movement tidak menerima guncangan berulang.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  <section class="bagian bagian--terang" id="bagian-terkait" aria-labelledby="judul-terkait">
+    <div class="pembungkus">
+      <div class="kepala-bagian">
+        <h2 id="judul-terkait">Dari keluarga yang sama</h2>
+        <p class="lede">Model lain dengan karakter serupa, bila Anda ingin membandingkan ukuran atau material.</p>
+      </div>
+      <div class="grid-produk" id="grid-terkait"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="situs-footer">
+  <div class="pembungkus">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="logo">Kronos<span class="logo__titik" aria-hidden="true"></span></span>
+        <p>Perakit jam tangan asal Surabaya sejak 2014. Movement teruji, material jujur, garansi yang ditepati.</p>
+        <ul class="sosial">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1"/></svg>
+          </a></li>
+          <li><a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 4v10.5a3.5 3.5 0 11-3-3.46"/><path d="M14 4c.4 2.2 1.9 3.6 4 3.9"/></svg>
+          </a></li>
+          <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 12a8 8 0 01-11.8 7L4 20l1.1-4A8 8 0 1120 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.6 0 1-.4 1-1l-1.6-.8-1 1c-1-.5-1.9-1.4-2.4-2.4l1-1L10.7 9c-.6 0-1 .4-1 .5z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+      <nav class="footer__nav" aria-label="Navigasi footer">
+        <h3>Jelajahi</h3>
+        <ul class="footer__daftar">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="koleksi.html">Koleksi</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="koleksi.html?kategori=diver">Koleksi Diver</a></li>
+        </ul>
+      </nav>
+      <div class="footer__kontak">
+        <h3>Butuh bantuan</h3>
+        <ul class="footer__daftar">
+          <li>Jl. Basuki Rahmat No. 88, Surabaya 60271</li>
+          <li><a href="tel:+62311234567">(031) 123 4567</a></li>
+          <li><a href="mailto:halo@kronos.id">halo@kronos.id</a></li>
+          <li>Senin–Sabtu, 10.00–19.00 WIB</li>
+        </ul>
+      </div>
+      <div class="footer__kontak">
+        <h3>Legal</h3>
+        <ul class="footer__daftar">
+          <li><a href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
+          <li><a href="syarat-ketentuan.html">Syarat &amp; Ketentuan</a></li>
+          <li><a href="kebijakan-retur.html">Kebijakan Retur</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bawah">
+      <span>© <span data-tahun>2026</span> Kronos Indonesia. Seluruh hak cipta dilindungi.</span>
+      <span>Harga dapat berubah sewaktu-waktu.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="ke-atas" type="button" aria-label="Kembali ke atas halaman">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 19V6"/><path d="M6 11.5L12 5.5l6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

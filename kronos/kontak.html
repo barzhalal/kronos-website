@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak — Kronos</title>
+<meta name="description" content="Hubungi Kronos untuk konsultasi produk, servis, dan informasi garansi.">
+<meta name="theme-color" content="#14161A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kronos">
+<meta property="og:title" content="Kontak — Kronos">
+<meta property="og:description" content="Alamat ruang pamer, jam operasional, dan kanal bantuan Kronos di Surabaya.">
+<meta property="og:image" content="assets/img/hero-kronos.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lewati" href="#konten">Lompat ke konten utama</a>
+
+<header class="situs-header">
+  <div class="pembungkus situs-header__isi">
+    <a class="logo" href="index.html">Kronos<span class="logo__titik" aria-hidden="true"></span></a>
+    <button class="hamburger" type="button" aria-expanded="false" aria-controls="menu-utama" aria-label="Buka menu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="menu-utama" aria-label="Navigasi utama">
+      <a class="nav__tautan" href="index.html">Beranda</a>
+      <a class="nav__tautan" href="koleksi.html">Koleksi</a>
+      <a class="nav__tautan" href="tentang.html">Tentang</a>
+      <a class="nav__tautan" href="kontak.html">Kontak</a>
+      <a class="tombol tombol--utama nav__cta" href="kontak.html">Hubungi kami</a>
+    </nav>
+  </div>
+</header>
+<button class="tirai" type="button" hidden aria-label="Tutup menu"></button>
+
+<main id="konten">
+
+  <section class="halaman-kepala">
+    <div class="pembungkus">
+      <nav class="remah" aria-label="Remah roti">
+        <a href="index.html">Beranda</a><span aria-hidden="true">/</span>Kontak
+      </nav>
+      <h1>Hubungi Kronos</h1>
+      <p class="lede">Pertanyaan soal ukuran, garansi, atau servis dijawab pada hari kerja yang sama. Untuk hal mendesak, WhatsApp adalah jalur tercepat.</p>
+    </div>
+  </section>
+
+  <section class="bagian bagian--rapat" aria-labelledby="judul-kontak">
+    <div class="pembungkus kontak">
+      <h2 class="sr-only" id="judul-kontak">Formulir dan informasi kontak</h2>
+
+      <!-- Form kontak -->
+      <form class="form" id="form-kontak" novalidate>
+        <div class="sukses" id="form-sukses" role="status" tabindex="-1" hidden>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.2l2.6 2.6L16 9.4"/></svg>
+          <p>Pesan Anda terkirim. Tim kami membalas paling lambat satu hari kerja lewat email yang Anda tulis.</p>
+        </div>
+
+        <div class="form__baris">
+          <div class="bidang">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" autocomplete="name" placeholder="Nama Anda">
+            <p class="galat" id="error-nama"></p>
+          </div>
+          <div class="bidang">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@email.com">
+            <p class="galat" id="error-email"></p>
+          </div>
+        </div>
+
+        <div class="form__baris">
+          <div class="bidang">
+            <label for="telepon">Nomor HP</label>
+            <input type="tel" id="telepon" name="telepon" inputmode="numeric" autocomplete="tel" placeholder="08xxxxxxxxxx">
+            <p class="galat" id="error-telepon"></p>
+          </div>
+          <div class="bidang">
+            <label for="subjek">Subjek</label>
+            <select id="subjek" name="subjek">
+              <option value="">Pilih subjek</option>
+              <option value="produk">Konsultasi produk</option>
+              <option value="pesanan">Status pesanan</option>
+              <option value="garansi">Klaim garansi</option>
+              <option value="servis">Servis &amp; perawatan</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+            <p class="galat" id="error-subjek"></p>
+          </div>
+        </div>
+
+        <div class="bidang">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" placeholder="Ceritakan kebutuhan Anda, minimal 10 karakter."></textarea>
+          <p class="galat" id="error-pesan"></p>
+        </div>
+
+        <button class="tombol tombol--gelap tombol--penuh" type="submit">Kirim pesan</button>
+      </form>
+
+      <!-- Informasi kontak -->
+      <div class="kontak__info">
+        <ul class="info-daftar">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div>
+              <strong>Ruang pamer &amp; bengkel</strong>
+              <span>Jl. Basuki Rahmat No. 88, Tegalsari, Surabaya 60271</span>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a1 1 0 01-1.1 1A15 15 0 014 5.1 1 1 0 015 4z"/></svg>
+            <div>
+              <strong>Telepon</strong>
+              <a href="tel:+62311234567">(031) 123 4567</a>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:halo@kronos.id">halo@kronos.id</a>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 1.8"/></svg>
+            <div>
+              <strong>Jam operasional</strong>
+              <span>Senin–Jumat 10.00–19.00 · Sabtu 10.00–16.00 · Minggu tutup</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="sosial" aria-label="Media sosial Kronos">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1"/></svg>
+          </a></li>
+          <li><a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 4v10.5a3.5 3.5 0 11-3-3.46"/><path d="M14 4c.4 2.2 1.9 3.6 4 3.9"/></svg>
+          </a></li>
+          <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 12a8 8 0 01-11.8 7L4 20l1.1-4A8 8 0 1120 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.6 0 1-.4 1-1l-1.6-.8-1 1c-1-.5-1.9-1.4-2.4-2.4l1-1L10.7 9c-.6 0-1 .4-1 .5z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Peta -->
+  <section class="bagian bagian--rapat" aria-labelledby="judul-peta">
+    <div class="pembungkus">
+      <div class="kepala-bagian">
+        <h2 id="judul-peta">Menemukan kami</h2>
+        <p class="lede">Ruang pamer berada di lantai dasar, tepat di seberang halte Basuki Rahmat. Parkir tersedia di sisi gedung.</p>
+      </div>
+      <div class="peta">
+        <iframe
+          src="https://www.google.com/maps?q=Jalan%20Basuki%20Rahmat%20Surabaya&output=embed"
+          title="Peta lokasi ruang pamer Kronos di Jalan Basuki Rahmat, Surabaya"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bagian bagian--terang" aria-labelledby="judul-faq">
+    <div class="pembungkus">
+      <div class="kepala-bagian">
+        <h2 id="judul-faq">Pertanyaan yang sering masuk</h2>
+      </div>
+      <div class="akordeon">
+        <div class="akordeon__item">
+          <h3>
+            <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-tombol-1">Berapa lama pesanan sampai?</button>
+          </h3>
+          <div class="akordeon__panel" id="faq-1" role="region" aria-labelledby="faq-tombol-1" hidden>
+            <p>Satu sampai dua hari untuk Jawa dan tiga sampai lima hari untuk luar Jawa, dihitung sejak pesanan dikonfirmasi. Ongkos kirim dan asuransi ditanggung Kronos.</p>
+          </div>
+        </div>
+        <div class="akordeon__item">
+          <h3>
+            <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-tombol-2">Apakah jam bisa ditukar setelah diterima?</button>
+          </h3>
+          <div class="akordeon__panel" id="faq-2" role="region" aria-labelledby="faq-tombol-2" hidden>
+            <p>Bisa, dalam tujuh hari sejak paket diterima, selama jam belum dipakai di luar ruangan dan kelengkapannya utuh. Penukaran ukuran atau model tidak dikenakan biaya tambahan selain selisih harga.</p>
+          </div>
+        </div>
+        <div class="akordeon__item">
+          <h3>
+            <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-tombol-3">Apa saja yang dicakup garansi 2 tahun?</button>
+          </h3>
+          <div class="akordeon__panel" id="faq-3" role="region" aria-labelledby="faq-tombol-3" hidden>
+            <p>Movement dan hasil perakitan. Baterai, tali, kaca pecah karena benturan, serta goresan pemakaian tidak termasuk. Klaim cukup dengan nomor pada kartu garansi, tanpa perlu struk pembelian.</p>
+          </div>
+        </div>
+        <div class="akordeon__item">
+          <h3>
+            <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-tombol-4">Bisakah strap dipasang sendiri di rumah?</button>
+          </h3>
+          <div class="akordeon__panel" id="faq-4" role="region" aria-labelledby="faq-tombol-4" hidden>
+            <p>Bisa. Seluruh model memakai spring bar quick release, jadi strap dapat dilepas tanpa alat. Bila Anda ragu, bawa ke ruang pamer dan kami pasangkan gratis.</p>
+          </div>
+        </div>
+        <div class="akordeon__item">
+          <h3>
+            <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-tombol-5">Apakah melayani pembelian untuk hadiah?</button>
+          </h3>
+          <div class="akordeon__panel" id="faq-5" role="region" aria-labelledby="faq-tombol-5" hidden>
+            <p>Ya. Kami sediakan kotak hadiah dan kartu ucapan tanpa biaya, serta nota tanpa harga di dalam paket. Sebutkan permintaan ini saat memesan lewat WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="situs-footer">
+  <div class="pembungkus">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="logo">Kronos<span class="logo__titik" aria-hidden="true"></span></span>
+        <p>Perakit jam tangan asal Surabaya sejak 2014. Movement teruji, material jujur, garansi yang ditepati.</p>
+        <ul class="sosial">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1"/></svg>
+          </a></li>
+          <li><a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 4v10.5a3.5 3.5 0 11-3-3.46"/><path d="M14 4c.4 2.2 1.9 3.6 4 3.9"/></svg>
+          </a></li>
+          <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp Kronos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 12a8 8 0 01-11.8 7L4 20l1.1-4A8 8 0 1120 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.6 0 1-.4 1-1l-1.6-.8-1 1c-1-.5-1.9-1.4-2.4-2.4l1-1L10.7 9c-.6 0-1 .4-1 .5z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+      <nav class="footer__nav" aria-label="Navigasi footer">
+        <h3>Jelajahi</h3>
+        <ul class="footer__daftar">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="koleksi.html">Koleksi</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="koleksi.html?kategori=diver">Koleksi Diver</a></li>
+        </ul>
+      </nav>
+      <div class="footer__kontak">
+        <h3>Butuh bantuan</h3>
+        <ul class="footer__daftar">
+          <li>Jl. Basuki Rahmat No. 88, Surabaya 60271</li>
+          <li><a href="tel:+62311234567">(031) 123 4567</a></li>
+          <li><a href="mailto:halo@kronos.id">halo@kronos.id</a></li>
+          <li>Senin–Sabtu, 10.00–19.00 WIB</li>
+        </ul>
+      </div>
+      <div class="footer__kontak">
+        <h3>Legal</h3>
+        <ul class="footer__daftar">
+          <li><a href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
+          <li><a href="syarat-ketentuan.html">Syarat &amp; Ketentuan</a></li>
+          <li><a href="kebijakan-retur.html">Kebijakan Retur</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bawah">
+      <span>© <span data-tahun>2026</span> Kronos Indonesia. Seluruh hak cipta dilindungi.</span>
+      <span>Harga dapat berubah sewaktu-waktu.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="ke-atas" type="button" aria-label="Kembali ke atas halaman">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 19V6"/><path d="M6 11.5L12 5.5l6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
