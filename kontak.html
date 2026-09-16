@@ -56,7 +56,7 @@
       <h2 class="sr-only" id="judul-kontak">Formulir dan informasi kontak</h2>
 
       <!-- Form kontak -->
-      <form class="form" id="form-kontak" novalidate>
+      <form class="form" id="form-kontak" novalidate data-reveal="kiri">
         <div class="sukses" id="form-sukses" role="status" tabindex="-1" hidden>
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.2l2.6 2.6L16 9.4"/></svg>
           <p>Pesan Anda terkirim. Tim kami membalas paling lambat satu hari kerja lewat email yang Anda tulis.</p>
@@ -105,7 +105,7 @@
       </form>
 
       <!-- Informasi kontak -->
-      <div class="kontak__info">
+      <div class="kontak__info" data-reveal="kanan">
         <ul class="info-daftar">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
@@ -155,11 +155,11 @@
   <!-- Peta -->
   <section class="bagian bagian--rapat" aria-labelledby="judul-peta">
     <div class="pembungkus">
-      <div class="kepala-bagian">
+      <div class="kepala-bagian" data-reveal>
         <h2 id="judul-peta">Menemukan kami</h2>
         <p class="lede">Ruang pamer berada di lantai dasar, tepat di seberang halte Basuki Rahmat. Parkir tersedia di sisi gedung.</p>
       </div>
-      <div class="peta">
+      <div class="peta" data-reveal="zoom">
         <iframe
           src="https://www.google.com/maps?q=Jalan%20Basuki%20Rahmat%20Surabaya&output=embed"
           title="Peta lokasi ruang pamer Kronos di Jalan Basuki Rahmat, Surabaya"
@@ -172,10 +172,10 @@
   <!-- FAQ -->
   <section class="bagian bagian--terang" aria-labelledby="judul-faq">
     <div class="pembungkus">
-      <div class="kepala-bagian">
+      <div class="kepala-bagian" data-reveal>
         <h2 id="judul-faq">Pertanyaan yang sering masuk</h2>
       </div>
-      <div class="akordeon">
+      <div class="akordeon" data-reveal>
         <div class="akordeon__item">
           <h3>
             <button class="akordeon__tombol" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-tombol-1">Berapa lama pesanan sampai?</button>

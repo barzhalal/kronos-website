@@ -20,6 +20,81 @@
 </head>
 <body>
 
+<div class="intro" id="intro" role="presentation" aria-hidden="true">
+  <div class="intro__sinar"></div>
+  <div class="intro__inti" id="introInti">
+    <svg class="intro__jam" viewBox="0 0 220 220" width="132" height="132" aria-hidden="true">
+      <!-- Bentuk luar: digambar sebagai berlian lalu bermorf jadi lingkaran bezel -->
+      <path class="intro__bentuk" id="introBentuk"
+        d="M110,20 C140,50 170,80 200,110 C170,140 140,170 110,200 C80,170 50,140 20,110 C50,80 80,50 110,20 Z">
+        <animate attributeName="d" begin="1.05s" dur="0.9s" fill="freeze"
+          calcMode="spline" keySplines="0.22 0.61 0.36 1"
+          values="M110,20 C140,50 170,80 200,110 C170,140 140,170 110,200 C80,170 50,140 20,110 C50,80 80,50 110,20 Z;
+                  M110,20 C159.7,20 200,60.3 200,110 C200,159.7 159.7,200 110,200 C60.3,200 20,159.7 20,110 C20,60.3 60.3,20 110,20 Z"/>
+      </path>
+
+      <!-- Titik keemasan yang mengorbit sepanjang bezel selagi termuat -->
+      <circle class="intro__orbit" r="3.2">
+        <animateMotion begin="0.3s" dur="2.6s" repeatCount="indefinite" rotate="auto"
+          path="M110,20 C159.7,20 200,60.3 200,110 C200,159.7 159.7,200 110,200 C60.3,200 20,159.7 20,110 C20,60.3 60.3,20 110,20 Z"/>
+      </circle>
+
+      <g class="intro__indeks">
+        <line transform="rotate(0 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(30 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(60 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(90 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(120 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(150 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(180 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(210 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(240 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(270 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(300 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+        <line transform="rotate(330 110 110)" x1="110" y1="20" x2="110" y2="30"/>
+      </g>
+      <line class="intro__jarum intro__jarum--jam" x1="110" y1="110" x2="110" y2="72"/>
+      <line class="intro__jarum intro__jarum--menit" x1="110" y1="110" x2="110" y2="52"/>
+      <line class="intro__jarum intro__jarum--detik" x1="110" y1="118" x2="110" y2="44"/>
+      <circle class="intro__poros" cx="110" cy="110" r="4"/>
+    </svg>
+    <div class="intro__merek" aria-hidden="true">
+      <span class="intro__huruf" style="--i:0">K</span><span class="intro__huruf" style="--i:1">R</span><span class="intro__huruf" style="--i:2">O</span><span class="intro__huruf" style="--i:3">N</span><span class="intro__huruf" style="--i:4">O</span><span class="intro__huruf" style="--i:5">S</span>
+    </div>
+    <span class="intro__garis"></span>
+    <p class="intro__tagline">JAM TANGAN PREMIUM INDONESIA</p>
+  </div>
+  <button class="intro__lewati" id="introLewati" type="button">Lewati</button>
+  <div class="intro__tirai intro__tirai--kiri"></div>
+  <div class="intro__tirai intro__tirai--kanan"></div>
+</div>
+<script>
+(function () {
+  var intro = document.getElementById('intro');
+  if (!intro) return;
+  var sudahLihat = false;
+  try { sudahLihat = sessionStorage.getItem('kronosIntroDone') === '1'; } catch (e) {}
+  var kurangiGerak = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (sudahLihat || kurangiGerak) {
+    intro.style.display = 'none';
+  } else {
+    document.documentElement.classList.add('intro-aktif');
+    try { sessionStorage.setItem('kronosIntroDone', '1'); } catch (e) {}
+    window.addEventListener('load', function () {
+      var inti = document.getElementById('introInti');
+      var logo = document.querySelector('.situs-header .logo');
+      if (!inti || !logo) return;
+      var rl = logo.getBoundingClientRect();
+      var ri = inti.getBoundingClientRect();
+      var dx = (rl.left + rl.width / 2) - (ri.left + ri.width / 2);
+      var dy = (rl.top + rl.height / 2) - (ri.top + ri.height / 2);
+      inti.style.setProperty('--tuju-x', dx + 'px');
+      inti.style.setProperty('--tuju-y', dy + 'px');
+    });
+  }
+})();
+</script>
+
 <a class="lewati" href="#konten">Lompat ke konten utama</a>
 
 <header class="situs-header">
@@ -46,7 +121,7 @@
     <div class="pembungkus hero__grid">
       <div class="hero__teks">
         <h1>Jam yang menemani, bukan sekadar menghitung waktu.</h1>
-        <p>Kronos merakit jam tangan dengan movement teruji, material yang jujur, dan proporsi yang nyaman dipakai seharian. Enam belas model, empat karakter, satu standar kualitas.</p>
+        <p>Kronos merakit jam tangan dengan movement teruji, material yang jujur, dan proporsi yang nyaman dipakai seharian. Tiga puluh dua model, empat karakter, satu standar kualitas.</p>
         <div class="hero__aksi">
           <a class="tombol tombol--utama" href="koleksi.html">Lihat koleksi</a>
           <a class="tombol tombol--garis" href="tentang.html">Tentang kami</a>
@@ -72,19 +147,19 @@
       </div>
       <div class="kategori-grid" data-reveal>
         <a class="kategori" href="koleksi.html?kategori=classic">
-          <img src="assets/img/kategori-classic.svg" alt="Jam tangan classic Kronos dengan angka Romawi" width="840" height="600" loading="lazy">
+          <span class="kategori__media reveal-gambar"><img src="assets/img/kategori-classic.svg" alt="Jam tangan classic Kronos dengan angka Romawi" width="840" height="600" loading="lazy"></span>
           <span class="kategori__label"><strong>Classic</strong><span>4 model</span></span>
         </a>
         <a class="kategori" href="koleksi.html?kategori=diver">
-          <img src="assets/img/kategori-diver.svg" alt="Jam tangan diver Kronos dengan bezel putar" width="840" height="600" loading="lazy">
+          <span class="kategori__media reveal-gambar"><img src="assets/img/kategori-diver.svg" alt="Jam tangan diver Kronos dengan bezel putar" width="840" height="600" loading="lazy"></span>
           <span class="kategori__label"><strong>Diver</strong><span>4 model</span></span>
         </a>
         <a class="kategori" href="koleksi.html?kategori=chronograph">
-          <img src="assets/img/kategori-chronograph.svg" alt="Jam tangan chronograph Kronos dengan tiga subdial" width="840" height="600" loading="lazy">
+          <span class="kategori__media reveal-gambar"><img src="assets/img/kategori-chronograph.svg" alt="Jam tangan chronograph Kronos dengan tiga subdial" width="840" height="600" loading="lazy"></span>
           <span class="kategori__label"><strong>Chronograph</strong><span>4 model</span></span>
         </a>
         <a class="kategori" href="koleksi.html?kategori=minimalist">
-          <img src="assets/img/kategori-minimalist.svg" alt="Jam tangan minimalist Kronos dengan dial polos" width="840" height="600" loading="lazy">
+          <span class="kategori__media reveal-gambar"><img src="assets/img/kategori-minimalist.svg" alt="Jam tangan minimalist Kronos dengan dial polos" width="840" height="600" loading="lazy"></span>
           <span class="kategori__label"><strong>Minimalist</strong><span>4 model</span></span>
         </a>
       </div>

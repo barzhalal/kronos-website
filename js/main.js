@@ -419,7 +419,7 @@ const PRODUK = [
       waterResistance: '30 M',
       garansi: '2 Tahun'
     },
-    varian: ['Kulit Tan', 'Kulit Hitam'],
+    varian: ['Kulit Tan', 'Kulit Putih'],
     stok: true,
     unggulan: false
   },
@@ -735,7 +735,7 @@ const tautanWhatsApp = (pesan) =>
 const kartuProduk = (p, lazy = true) => `
   <article class="kartu">
     <a class="kartu__tautan" href="produk.html?id=${p.id}">
-      <div class="kartu__gambar">
+      <div class="kartu__gambar reveal-gambar">
         <img src="${p.gambar[0]}" alt="${p.nama}, jam tangan ${labelKategori(p.kategori)} Kronos"
              width="800" height="800"${lazy ? ' loading="lazy"' : ''}>
         ${p.stok ? '' : '<span class="kartu__stok">Stok habis</span>'}
@@ -1441,11 +1441,49 @@ function initFormKontak() {
 }
 
 /* --------------------------------------------------------------------------
+   9b. ANIMASI PEMBUKA (INTRO)
+   -------------------------------------------------------------------------- */
+
+function initIntro() {
+  const intro = $('#intro');
+  if (!intro) return;
+  // Sudah disembunyikan lewat inline script (sesi ulang / prefers-reduced-motion)
+  if (intro.style.display === 'none' || !document.documentElement.classList.contains('intro-aktif')) return;
+
+  let sudahKeluar = false;
+
+  const keluar = () => {
+    if (sudahKeluar) return;
+    sudahKeluar = true;
+    intro.classList.add('intro--keluar');
+    window.setTimeout(() => {
+      intro.remove();
+      document.documentElement.classList.remove('intro-aktif');
+    }, 1150);
+  };
+
+  const tombolLewati = $('#introLewati');
+  if (tombolLewati) {
+    tombolLewati.addEventListener('click', keluar);
+  }
+
+  document.addEventListener('keydown', function escKeluar(e) {
+    if (e.key === 'Escape') {
+      keluar();
+      document.removeEventListener('keydown', escKeluar);
+    }
+  });
+
+  window.setTimeout(keluar, 4650);
+}
+
+/* --------------------------------------------------------------------------
    10. INISIALISASI
    -------------------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Global
+  initIntro();
   initHeader();
   initMenu();
   initBackToTop();
